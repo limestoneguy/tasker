@@ -70,13 +70,13 @@ main {
   }
 }
 
-.buttons-wrapper{
+.buttons-wrapper {
   width: 220px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
   align-items: center;
-  button{
+  button {
     border-radius: 10px;
     border: none;
     width: 100px;
@@ -86,22 +86,40 @@ main {
   }
 }
 
-.activated-button{
+.activated-button {
   background-color: $blue;
   color: white;
 }
 
-.deactivated-button{
+.deactivated-button {
   background-color: $dark-background;
   color: rgba(255, 255, 255, 0.5);
 }
 
-@media (max-width: 600px){
-  .container{
+@media (max-width: 600px) {
+  .container {
     padding: 8px;
   }
 
-  h1{
+  h1 {
     font-size: 20px;
+  }
+
+  .userProfile {
+    grid-template-columns: 60px;
+    img {
+      float: right;
+    }
+    p {
+      display: none;
+    }
+  }
+
+  nav {
+    padding: 10px 0;
+  }
+
+  #more-icon {
+    display: none;
   }
 }
