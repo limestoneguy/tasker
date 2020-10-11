@@ -1,6 +1,107 @@
 @import "~variables.scss";
 
-.container{
+.container {
   background-color: $background-color;
   color: white;
+  padding: 50px;
+  height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+  h2 {
+    margin-left: 20px;
+    align-self: center;
+  }
+}
+
+.userProfile {
+  justify-self: right;
+  display: grid;
+  grid-template-columns: 50px 120px 100px;
+
+  .profile-pic {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 12px;
+    margin-right: 20px;
+    align-self: center;
+  }
+
+  #more-icon {
+    width: 45px;
+    align-self: center;
+  }
+}
+
+main {
+  padding: 22px;
+  .task-header {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    img {
+      margin-left: 20px;
+      align-self: center;
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.buttons-wrapper{
+  width: 220px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  align-items: center;
+  button{
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.activated-button{
+  background-color: $blue;
+  color: white;
+}
+
+.deactivated-button{
+  background-color: $dark-background;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 600px){
+  .container{
+    padding: 8px;
+  }
+
+  h1{
+    font-size: 20px;
+  }
 }

@@ -1,5 +1,27 @@
+@import "~variables.scss";
+
 *{
   padding: 0;
   margin: 0;
-  font-family: "Nunto";
+  font-family: "Nunito";
+}
+
+.justify-self-end{
+  justify-self: end;
+}
+
+.red-font{
+  color: $red;
+}
+
+.green-font{
+  color: $green;
+}
+
+.red-bg{
+  background-color: $red;
+}
+
+.green-bg{
+  background-color: $green;
 }

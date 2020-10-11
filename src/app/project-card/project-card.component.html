@@ -1,0 +1,21 @@
+<div class="card">
+  <header>
+    <img src={{projectIconUrl}} alt="">
+    <div class="info">
+      <h3>{{projectTitle}}</h3>
+      <div class="sub-heading">
+        <p class="opacity-50-black">{{tasks}} tasks</p>
+        <div class="spacer">|</div>
+        <p class="red-font">{{projectStartDate}}</p>
+      </div>
+    </div>
+
+    <div class="progress-wrapper">
+      <h3>Progress</h3>
+      <h3 class="justify-self-end" [ngClass]="progress<33?'red-font':'green-font'">{{progress}}%</h3>
+      <div class="progress">
+        <div class="progress-value" [ngClass]="progress<33?'red-bg':'green-bg'" [ngStyle]="{'width': progress+'%'}"></div>
+      </div>
+    </div>
+  </header>
+</div>

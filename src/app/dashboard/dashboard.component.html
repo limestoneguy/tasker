@@ -1,3 +1,44 @@
 <div class="container">
-  <p>Rishabh</p>
+  <nav>
+    <h2 >Dashboard</h2>
+    <div class="userProfile">
+      <img class="profile-pic"
+        src="https://images.unsplash.com/photo-1519455953755-af066f52f1a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+        alt="Profile Pic"
+      />
+      <p>TeamOne</p>
+      <img id="more-icon" src="assets/more_icon.svg" alt="">
+    </div>
+  </nav>
+
+  <main>
+    <div class="task-header">
+      <h1>Today's Tasks</h1>
+      <img src="assets/forward_button.svg" alt="forward_button" >
+    </div>
+
+    <div class="scrolling-wrapper">
+      <app-task-card projectName="Sin(M)" taskTitle="Homepage Design" progress=60></app-task-card>
+      <app-task-card projectName="Rishabh" taskTitle="Wireframe review please be responsive" progress=30></app-task-card>
+    </div>
+
+
+    <div class="task-header">
+      <h1>Recent Projects</h1>
+      <img src="assets/forward_button.svg" alt="forward_button" >
+      <div class="buttons-wrapper">
+        <button [ngClass]="buttonOpen?'activated-button':'deactivated-button'" (click)="toogleFilter('open')">open</button>
+        <button [ngClass]="!buttonOpen?'activated-button':'deactivated-button'" (click)="toogleFilter('close')">closed</button>
+      </div>
+    </div>
+
+    <div class="scrolling-wrapper">
+      <app-project-card projectIconUrl="https://images.unsplash.com/photo-1519455953755-af066f52f1a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" projectTitle="Sin(M)" tasks=0 projectStartDate="12 Dec 19" progress=30></app-project-card>
+      <app-project-card projectIconUrl="https://images.unsplash.com/photo-1519455953755-af066f52f1a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" projectTitle="DigiLearn" tasks=0 projectStartDate="12 Dec 19" progress=60></app-project-card>
+      <app-project-card projectIconUrl="https://images.unsplash.com/photo-1519455953755-af066f52f1a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" projectTitle="Something" tasks=0 projectStartDate="12 Dec 19" progress=30></app-project-card>
+      <app-project-card projectIconUrl="https://images.unsplash.com/photo-1519455953755-af066f52f1a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" projectTitle="" tasks=0 projectStartDate="12 Dec 19" progress=30></app-project-card>
+    </div>
+
+  </main>
+
 </div>
