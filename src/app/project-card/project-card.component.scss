@@ -1,13 +1,12 @@
 @import "~variables.scss";
 
-$cardWidth: 500px;
 
 .card {
   padding: 30px;
   display: inline-block;
   margin-top: 50px;
   margin-right: 50px;
-  width: $cardWidth;
+  width: auto;
   background: $dark-background;
   border-radius: 10px;
 
@@ -37,7 +36,7 @@ header {
 }
 
 .sub-heading {
-  width: 100%;
+  width: 185px;
   display: grid;
   justify-items: center;
   grid-template-columns: min-content min-content min-content;
@@ -68,7 +67,6 @@ header {
 @media (max-width: 715px){
   .card{
     display: block;
-    width: 84%;
     margin-right: 0;
     padding: 20px;
   }

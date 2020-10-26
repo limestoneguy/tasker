@@ -47,16 +47,20 @@ nav {
 
 main {
   padding: 22px;
-  .task-header {
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    img {
-      margin-left: 20px;
-      align-self: center;
-      width: 25px;
-      height: 25px;
-    }
+}
+
+.task-header {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  h1{
+    align-self: center;
+  }
+  img {
+    margin-left: 20px;
+    align-self: center;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -96,7 +100,24 @@ main {
   color: rgba(255, 255, 255, 0.5);
 }
 
-@media (max-width: 600px) {
+.floating-action-button{
+  $button-size: 60px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background-color: $red;
+  padding: 10px;
+  border-radius: 50%;
+  width: $button-size;
+  height: $button-size;
+  box-shadow: 0px 5px 5px rgba($color: #000000, $alpha: 0.5);
+  img{
+    width: $button-size;
+    height: $button-size;
+  }
+}
+
+@media (max-width: 650px) {
   .container {
     padding: 8px;
   }
@@ -105,21 +126,27 @@ main {
     font-size: 20px;
   }
 
-  .userProfile {
-    grid-template-columns: 60px;
-    img {
-      float: right;
-    }
-    p {
+  main{
+    padding: 10px;
+  }
+
+  nav {
+    padding: 10px 10px;
+    grid-template-columns: min-content;
+    h2 {
       display: none;
     }
   }
 
-  nav {
-    padding: 10px 0;
+  .task-header{
+    grid-template-columns: auto 117px;
   }
 
-  #more-icon {
-    display: none;
+  .buttons-wrapper{
+    margin-top: 20px;
+  }
+
+  #more-icon{
+    display: none
   }
 }

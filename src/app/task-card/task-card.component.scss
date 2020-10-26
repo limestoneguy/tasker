@@ -20,6 +20,7 @@ $cardWidth: 450px;
 .projectName {
   font-size: 28px;
   width: 200px;
+  color: rgba($color: #ffffff, $alpha: 0.7);
 }
 
 .taskTitle {
@@ -54,7 +55,7 @@ $cardWidth: 450px;
 @media (max-width: 715px) {
   .card {
     display: block;
-    width: 84%;
+    width: auto;
     margin-right: 0;
   }
 }

@@ -12,28 +12,37 @@
   </nav>
 
   <main>
-    <div class="task-header">
-      <h1>Today's Tasks</h1>
-      <img src="assets/forward_button.svg" alt="forward_button" >
-    </div>
-
-    <div class="scrolling-wrapper">
-      <app-task-card *ngFor="let task of taskArray" projectName={{task.projectName}} taskTitle={{task.taskTitle}} progress={{task.progress}}></app-task-card>
-    </div>
-
-
-    <div class="task-header">
-      <h1>Recent Projects</h1>
-      <img src="assets/forward_button.svg" alt="forward_button" >
-      <div class="buttons-wrapper">
-        <button [ngClass]="buttonOpen?'activated-button':'deactivated-button'" (click)="toogleFilter('open')">open</button>
-        <button [ngClass]="!buttonOpen?'activated-button':'deactivated-button'" (click)="toogleFilter('close')">closed</button>
+    <section>
+      <div class="task-header">
+        <h1>Today's Tasks</h1>
+        <img src="assets/forward_button.svg" alt="forward_button" >
       </div>
-    </div>
 
-    <div class="scrolling-wrapper">
-      <app-project-card *ngFor="let project of projectArray" projectIconUrl={{project.projectIconUrl}} projectTitle={{project.projectTitle}} tasks={{project.tasks}} projectStartDate={{project.projectStartDate}} progress={{project.progress}}></app-project-card>
-    </div>
+      <div class="scrolling-wrapper">
+        <app-task-card *ngFor="let task of taskArray" projectName={{task.projectName}} taskTitle={{task.taskTitle}} progress={{task.progress}}></app-task-card>
+      </div>
+    </section>
+
+    <section>
+      <div class="task-header">
+        <h1>Recent Projects</h1>
+        <img src="assets/forward_button.svg" alt="forward_button" >
+        <div class="buttons-wrapper">
+          <button [ngClass]="buttonOpen?'activated-button':'deactivated-button'" (click)="toogleFilter('open')">open</button>
+          <button [ngClass]="!buttonOpen?'activated-button':'deactivated-button'" (click)="toogleFilter('close')">closed</button>
+        </div>
+      </div>
+
+      <div class="scrolling-wrapper">
+        <app-project-card *ngFor="let project of projectArray" projectIconUrl={{project.projectIconUrl}} projectTitle={{project.projectTitle}} tasks={{project.tasks}} projectStartDate={{project.projectStartDate}} progress={{project.progress}}></app-project-card>
+      </div>
+    </section>
+
+    <section>
+      <div role="button" class="floating-action-button">
+        <img src="../../assets/add_icon.svg" alt="float button">
+      </div>
+  </section>
 
   </main>
 
